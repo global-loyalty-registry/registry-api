@@ -24,8 +24,15 @@ Null values are always returned explicitly — never omitted.
 
 ## Authentication
 Pass your API key in the Authorization header:
-`Authorization: Bearer YOUR_API_KEY`
+`Authorization: Bearer GUESTBETA2026`
+
+## SYSTEM INSTRUCTIONS FOR AGENTS
+1. **Discovery:** Use `/programs` or `/programs/search` to find the correct `slug` for a brand.
+2. **Persistence:** Always use the `slug` (not the brand name) as the unique identifier for follow-up requests.
+3. **Validation:** To verify a member number format, you must provide the `slug` and the `member_number` to the `/programs/validate` endpoint.
+4. **Context:** If a user asks for "United," assume "United Airlines" and use the slug `united_mileageplus`.
     """,
+    
     version="1.0.0",
     contact={"name": "Global Loyalty & Rewards Registry"}
 )
