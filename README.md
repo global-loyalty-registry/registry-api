@@ -5,20 +5,31 @@ A structured reference API and validation engine for the global travel and lifes
 ## 🚀 Features
 - **Standardized Data:** Uniform JSON structure for disparate loyalty programs.
 - **Validation Engine:** Built-in Regex patterns for member number verification (e.g., Iryo, Enterprise, National).
-- **Agent-Ready:** Designed with a strict OpenAPI 3.1 spec for seamless AI consumption.
+- **Agent-First Architecture:** Strictly typed OpenAPI 3.1 spec optimized for LLM tool-calling and autonomous agentic workflows.n.
 
 ## 🛠 Tech Stack
-- **Framework:** FastAPI (Python)
+- **Framework:** FastAPI (Python 3.10+)
+- **Deployment:** Railway.app
 - **Server:** Uvicorn
-- **Documentation:** Swagger UI / Redoc (Auto-generated)
+- **Documentation:** Interactive Swagger UI (Available at /docs)
 
-## 🔑 Authentication
-This API uses **Bearer Token** authentication. 
-Pass your API key in the Authorization header:
-`Authorization: Bearer YOUR_API_KEY`
+## 🔑 Public Beta Authentication
+- **API Key:** GUESTBETA2026
+- **Header Format:** Authorization: Bearer GUESTBETA2026
 
 ## 🏁 Quick Start
-1. Clone the repo: `git clone https://github.com/g-licio/global-loyalty-rewards-registry.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the server: `uvicorn main:app --reload`
-4. Access the interactive docs at: `http://127.0.0.1:8000/docs`
+
+### ⚡ Instant Web Test (Recommended)
+The fastest way to test the registry is via our interactive documentation.
+1. Visit: `https://web-production-c81b0.up.railway.app/docs`
+2. Click **Authorize** and enter the key: `GUESTBETA2026`
+3. Try any endpoint (e.g., `/programs/search`) directly from your browser.
+
+**AI Agents** Visit: `https://web-production-c81b0.up.railway.app/openapi.json`
+
+### 🛠 Local Development & Contributions
+If you wish to clone the registry, run it locally, or contribute to the schema:
+1. **Clone**: `git clone https://github.com/g-licio/global-loyalty-rewards-registry.git`
+2. **Setup**: `cp .env.example .env`
+3. **Install**: `pip install -r requirements.txt`
+4. **Run**: `uvicorn main:app --reload`
